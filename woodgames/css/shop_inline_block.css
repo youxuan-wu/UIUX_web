@@ -1,0 +1,46 @@
+/* https://docs.google.com/presentation/d/1P95_hBKRUEYYAdCCTdUOKSMYx3qKKwJQnSIJXDn_7yA/edit#slide=id.g22eba8c7387_0_0 
+06 CSS 網頁切版術 - inline-block 排版 */
+.nav_child{
+    display: none;
+}
+.shop_content>.item_wrap{
+    border: 1px solid #8a8000;   /*畫線*/
+    padding: 15px;
+    border-bottom: none;
+}
+.item_left{
+    display: inline-block;
+    width: 20%;
+    margin-right:-4px;
+    vertical-align: top;         /*靠上對齊*/
+    padding-right: 15px;
+}
+.item_mid{
+    display: inline-block;
+    width: 40%;
+    margin-right:-4px;
+    vertical-align: top;
+}
+.item_right{
+    display: inline-block;
+    width: 40%;
+    margin-right:-4px;
+    vertical-align: top;
+}
+
+@media(max-width:992px){    /* 小於992px */
+    .item_left{
+        display: inline-block;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .item_mid{
+        width: 50%;
+        padding-right: 0;
+    }
+    .item_right{
+        width: 50%;
+        padding-right: 0;
+    }
+}

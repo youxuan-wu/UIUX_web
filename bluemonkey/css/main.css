@@ -1,0 +1,244 @@
+html {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+-webkit-box-sizing: inherit;
+-moz-box-sizing: inherit;
+box-sizing: inherit;
+}
+
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+/* header 區塊 */
+header{
+display: flex;
+height: 75px;
+align-items: center;
+}
+header .header_left .logo{
+width: 100px;
+}
+.header_left a:hover .logo_text{
+    -webkit-animation: hover-shine 1.5s cubic-bezier(0, 0.58, 1, 0.44) infinite;
+    animation: hover-shine 1.5s cubic-bezier(0, 0.58, 1, 0.44) infinite;
+}
+@keyframes hover-shine {
+0%{
+    background: #52b14c;
+    color: white;
+}
+25%{
+    background: #ffdd3d;
+    color: white;
+}
+50%{
+    background: #f8b158;
+    color: white;
+}
+75%{
+    background: #f15b3a;
+    color: white;
+}
+100%{
+    background: #28b2ee;
+    color: white;
+}
+}
+header .header_left a{
+display: flex;
+margin: 0 55px;
+}
+header .header_mid>ul{
+display: flex;
+}
+header .header_right{
+margin-left: auto;
+}
+header .header_right a{
+border: 2px solid orange;
+border-radius: 30px;
+padding: 20px;
+color: black;
+font-weight: bold;
+margin-right: 20px;
+}
+header .header_right a:hover{
+background: linear-gradient(135deg,#f6d365,#fda085);
+color: white;
+}
+header .header_left .logo_text{
+border: 1px solid #ccc;
+color: #595959;
+height: 30px;
+line-height: 30px;
+padding: 0 5px;
+font-weight: bold;
+margin-left: 10px;
+}
+
+/* 漢堡選單 */
+#header_check{
+display: none;
+}
+#header_check + label{
+display: none;
+}
+
+/* main 區塊 */
+.section_banner{
+background-color: #1b96e1;
+text-align: center;
+padding: 30px 0;
+}
+.section_banner img{
+width: 100%;
+}
+
+/* 表單區塊 */
+/* 寫法一 */
+/* .bm_form input.form-control{
+border: 1px solid #000;
+background-color: #e0e0e0;
+padding: 10px 24px;
+outline: none;
+font-size: 22px;
+}
+.bm_form input.form-control:focus{
+border-color: #0693e3;
+box-shadow: 0 0 0 1.5px #0693e3;
+} */
+
+/* 寫法二 */
+.bm_form .input_group{
+    border: 1px solid #000;
+    background-color: #e0e0e0;
+    margin-bottom: 15px;
+    position: relative;
+}
+.bm_form .input_group::before{
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    background: url(https://cdn-icons-png.flaticon.com/512/3064/3064155.png);
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    left: 4px;
+    top: 6px;
+}
+.bm_form input.form-control{
+    outline: none;
+    border: none;
+    background-color: transparent; /* 透明色 */
+    width: 100%;
+    padding: 10px 24px;
+    padding-left: 35px;
+    border: 1px solid black;
+}
+.bm_form input.form-control:focus{
+    border-color: #0693e3;
+    box-shadow: 0 0 0 1.5px #0693e3;
+}
+.con-chose input{
+    display: none;
+}
+.con-chose label>span{
+    vertical-align: middle;
+}
+.con-chose label{
+    padding: 10px 13px;
+    display: inline-block;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.con-chose label::before{
+    content: "";
+    width: 23px;
+    height: 23px;
+    /* background-color: red; */
+    display: inline-block;
+    border: 2px solid #777;
+    border-radius: 50%;
+    vertical-align: middle;
+    transition: 0.25s ease; /* 動畫 */
+}
+.con-chose label:hover, .con-chose input:checked + label::before{
+    background: #dfdfdf;
+}
+.con-chose input:checked + label::before{
+    background-color: white;
+    border: 7px solid rgb(66, 66, 228);
+}
+
+
+/* 共用結構 */
+a{
+text-decoration: none;
+}
+.container{
+margin: 0 auto;
+max-width: 750px;
+width: 100%;
+}
+.bm_btn{
+background: #ffdd3d;
+color: black;
+padding: 0.5rem 6rem;
+border: 4px solid white;
+border-radius: 100px;
+font-weight: bold;
+letter-spacing: 0.7rem;
+font-size: 22px;
+display: inline-block;
+position: relative;
+}
+.bm_btn.arrow::before{
+content: "→";
+position: absolute;
+right: 10px;
+}
+.bm_btn.arrow::after{
+content: "★";
+position: absolute;
+left: 10px;
+}
+
+::selection {
+color: red;
+background: yellow;
+}
+
+@media(max-width:992px){
+#header_check + label{
+    display: block;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+.header_right{
+    display: none;
+}
+header .header_mid>ul{
+    position: absolute;
+    left: 0;
+    top: 75px;
+    background-color: red;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+}
+#header_check:checked+label+ul{
+    display: flex;
+}
+}

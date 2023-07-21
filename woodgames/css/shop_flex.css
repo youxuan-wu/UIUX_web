@@ -1,0 +1,45 @@
+/* https://docs.google.com/presentation/d/1rDbJ0BbgMVTWXUtiBYpLirLE27dNROVuNxmHPn_OcOw/edit#slide=id.g256dd3e0fe6_0_0
+07 CSS 網頁切版術 - flexbox 排版 */
+.nav_child{
+    display: none;
+}
+.shop_content>.item_wrap{
+    border: 1px solid #8a8000;   /*畫線*/
+    padding: 15px;
+}
+.item_row{
+    display: flex;
+}
+.item_left{
+    width: 20%;
+    width: 150px;
+    padding-right: 15px;
+}
+.item_mid{
+    width: 40%;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+.item_mid>div{
+    margin-top: auto;
+}
+.item_right{
+    width: 40%;
+}
+
+@media(max-width: 992px){
+    .item_row{
+        display: flex;
+        flex-direction: column;
+    }
+    .item_left{
+        width: 100%;
+    }
+    .item_mid{
+        width: 100%;
+    }
+    .item_right{
+        width: 100%;
+    }
+}

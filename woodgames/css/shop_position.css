@@ -1,0 +1,38 @@
+.nav_item{
+   /* position: relative; 圖釘*/
+    cursor: pointer;    /* 滑鼠游標形狀 */
+}
+.nav_item .nav_child{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+.nav_item:hover .nav_child{
+    display: block;
+    /* background: #8a8000; */
+}
+
+.nav_child a{
+    background-color: #8A8000;
+    font-size: 18px;
+    width: 100%;
+    text-align: left;
+    color: #ffffff;
+    line-height: 24px;
+    padding: 16px 30px;
+    padding-right: 15px;
+    letter-spacing: 1px;  /*文字間距*/
+    display: block;
+    text-decoration: none;
+}
+.nav_child a:hover{
+    background-color: #000000;
+}
+.item_row{
+    position: relative;
+}
+.item_mid>div{
+    position: absolute;
+    bottom: 15px;
+}

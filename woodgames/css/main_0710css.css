@@ -1,0 +1,158 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+@font-face {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 700;
+    src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.woff2) format('woff2'),
+         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.woff) format('woff'),
+         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Bold.otf) format('opentype');
+  }
+ @font-face {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff2) format('woff2'),
+         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff) format('woff'),
+         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.otf) format('opentype');
+  }
+body{
+    font-family: 'Noto Sans TC', 'Microwsoft JhengHei', sans-serif;
+    font-weight: 900;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.main{
+    /* width: 780px; */
+    /* background: gray; */
+    margin: 0 auto;
+    width: 100%;
+    max-width: 780px;
+}
+.main header{
+    text-align: center;
+}
+header>img{
+    width: 150px;
+    margin-top: 20px;
+}
+.main>nav{
+    border-top: 1px solid #8a8000;
+    border-bottom: 1px solid #8a8000;
+    margin-bottom: 20px;
+}
+.main>nav>ul{
+    display:flex;
+    
+}
+.main>nav>ul>li{
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    
+    /* 給inline block用的 */
+    /* display: inline-block;
+    width: 32.9%; 
+    margin-right: -4px; */
+
+    /* 給inline block用的 */
+    flex: 1;
+}
+.main>.content img{
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 17px;
+}
+.main>nav>ul>li>a.nav_item{
+    text-decoration: none;
+    font-size: 22px;
+    display: block;
+    /* font-weight: bold; */
+}
+.main>nav>ul>li>a.nav_item:hover{        /*hover滑鼠*/
+    background-color: #dcdddd;
+    opacity: 0.5;                         /*透明度*/
+}
+.main>nav>ul>li>a.nav_item:hover .nav_text{
+    color: red;
+}
+.main>nav>ul>li>a.nav_item>.nav_text{
+    color: #000;
+}
+
+.main>nav>ul>li>a.nav_item>.nav_text_en{
+    color: #8a8000;
+}
+.main>.shop_content>.item_wrap{
+    border: #8a8000 solid 1px;
+}
+.main>.shop_content>.item_wrap>.item_row{
+    border-bottom: 1px solid #8a8000;
+    display: flex;
+    padding: 15px;
+}
+.main>.shop_content>.item_wrap>.item_row>.item_left{
+    flex: 1px;
+}
+.main>.shop_content>.item_wrap>.item_row>.item_mid{
+    flex: 1px;
+}
+.main>.shop_content>.item_wrap>.item_row>.item_mid h1{
+    font-size: 20px;
+    margin: 0;
+}
+.main>.shop_content>.item_wrap>.item_row>.item_right{
+    flex: 1px;
+}
+.item_title{
+    border-bottom: 1px solid #8a8000;
+    padding-bottom: 5px;
+}
+.item_right_content{
+    display: flex;
+}
+.item_right_content_left{
+    flex: 1;
+}
+.item_right_content_left h2{
+    font-size: 16px;
+    color: #8a8000;
+}
+.item_right_content_left p{
+    font-size: 12px;
+}
+.item_right_content_right{
+    /* flex: 1; */
+}
+.item_button{
+    border-radius: 15px;
+    background-color: #8a8000;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+@media (max-width:992px){    /*手機版本*/
+    .main>nav>ul{
+        flex-direction: column;  /*垂直*/
+    }
+    .main>nav>ul>li{
+        width: 100%;
+    }
+}

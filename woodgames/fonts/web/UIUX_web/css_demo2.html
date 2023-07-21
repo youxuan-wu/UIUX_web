@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo2</title>
+    <style>
+        h1#a1{
+            color: brown;
+            font-size: 20px;
+        }
+        .b1{
+            font-weight: bold;
+            font-style: italic;
+        }
+        .line_under{
+            text-decoration: underline;
+        }
+        .line_none{
+            text-decoration: none;
+        }
+        p{
+            line-height: 2.5;
+            letter-spacing: 3px;
+            text-align: center;
+            text-shadow: 4px 5px 9px;
+        }
+        .box{
+            background-color: yellowgreen;
+            width: 200px;
+            height: 150px;
+            overflow: scroll;   /* 捲軸 */
+            overflow-x: hidden;
+            cursor: cell;
+
+        }
+        .box2{
+            background-color: aquamarine;
+            width: 100px;
+            height: 100px;
+            border: 110px solid #3f51b5; /*邊線*/
+            visibility: visible;   /*visibility:hidden保有消失範圍的空間 display則沒有*/
+            /* display: none; */
+        }
+        .box3{
+            background-color: turquoise;
+            height: 100px;
+            width: 100px;
+            border-radius: 5px;
+            margin-bottom: 20px;  /*隔開間距*/
+            margin-top: 100px;
+            margin-left: 50px;
+            border: 7px solid blue;
+            border-left: 5px solid rgb(228, 115, 144);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="a1" class="line_under">我是h1</h1>
+    <div class="box3"></div>
+    <div class="box2"></div>
+    <p class="line_under">嗨嗨嗨嗨嗨嗨嗨 <span class="b1 line_none">哈囉 </span>嗨嗨嗨嗨嗨嗨嗨</p>
+    <div class="box">1 <br> 22 <br> 333 <br> 4444 <br> 55555 <br> 666666 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> </div>
+
+</body>
+</html>
